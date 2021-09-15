@@ -1,0 +1,127 @@
+Started by timer
+Running as SYSTEM
+Building in workspace /var/jenkins_home/workspace/pushbackuptoGIT
+[pushbackuptoGIT] $ /bin/sh -xe /tmp/jenkins13242990613328842325.sh
++ cd /var/jenkins_home/backup
++ git add FULL-2021-09-14_13-40
++ git commit -m Jenkins Backup
+[master 7268ad8] Jenkins Backup
+ 108 files changed, 3632 insertions(+)
+ create mode 100644 FULL-2021-09-14_13-40/com.cloudbees.hudson.plugins.folder.config.AbstractFolderConfiguration.xml
+ create mode 100644 FULL-2021-09-14_13-40/config.xml
+ create mode 100644 FULL-2021-09-14_13-40/credentials.xml
+ create mode 100644 FULL-2021-09-14_13-40/github-plugin-configuration.xml
+ create mode 100644 FULL-2021-09-14_13-40/hudson.model.UpdateCenter.xml
+ create mode 100644 FULL-2021-09-14_13-40/hudson.plugins.build_timeout.operations.BuildStepOperation.xml
+ create mode 100644 FULL-2021-09-14_13-40/hudson.plugins.emailext.ExtendedEmailPublisher.xml
+ create mode 100644 FULL-2021-09-14_13-40/hudson.plugins.git.GitSCM.xml
+ create mode 100644 FULL-2021-09-14_13-40/hudson.plugins.git.GitTool.xml
+ create mode 100644 FULL-2021-09-14_13-40/hudson.plugins.timestamper.TimestamperConfig.xml
+ create mode 100644 FULL-2021-09-14_13-40/hudson.tasks.Mailer.xml
+ create mode 100644 FULL-2021-09-14_13-40/hudson.tasks.Shell.xml
+ create mode 100644 FULL-2021-09-14_13-40/hudson.triggers.SCMTrigger.xml
+ create mode 100644 FULL-2021-09-14_13-40/installedPlugins.xml
+ create mode 100644 FULL-2021-09-14_13-40/io.jenkins.plugins.junit.storage.JunitTestResultStorageConfiguration.xml
+ create mode 100644 FULL-2021-09-14_13-40/jenkins.fingerprints.GlobalFingerprintConfiguration.xml
+ create mode 100644 FULL-2021-09-14_13-40/jenkins.model.ArtifactManagerConfiguration.xml
+ create mode 100644 FULL-2021-09-14_13-40/jenkins.model.GlobalBuildDiscarderConfiguration.xml
+ create mode 100644 FULL-2021-09-14_13-40/jenkins.model.JenkinsLocationConfiguration.xml
+ create mode 100644 FULL-2021-09-14_13-40/jenkins.plugins.publish_over_ssh.BapSshPublisherPlugin.xml
+ create mode 100644 FULL-2021-09-14_13-40/jenkins.security.ResourceDomainConfiguration.xml
+ create mode 100644 FULL-2021-09-14_13-40/jenkins.tasks.filters.EnvVarsFilterGlobalConfiguration.xml
+ create mode 100644 FULL-2021-09-14_13-40/jenkins.telemetry.Correlator.xml
+ create mode 100644 FULL-2021-09-14_13-40/jobs/pushbackuptoGIT/builds/1/build.xml
+ create mode 100644 FULL-2021-09-14_13-40/jobs/pushbackuptoGIT/builds/1/changelog.xml
+ create mode 100644 FULL-2021-09-14_13-40/jobs/pushbackuptoGIT/builds/1/log
+ create mode 100644 FULL-2021-09-14_13-40/jobs/pushbackuptoGIT/builds/10/build.xml
+ create mode 100644 FULL-2021-09-14_13-40/jobs/pushbackuptoGIT/builds/10/changelog.xml
+ create mode 100644 FULL-2021-09-14_13-40/jobs/pushbackuptoGIT/builds/10/log
+ create mode 100644 FULL-2021-09-14_13-40/jobs/pushbackuptoGIT/builds/11/build.xml
+ create mode 100644 FULL-2021-09-14_13-40/jobs/pushbackuptoGIT/builds/11/changelog.xml
+ create mode 100644 FULL-2021-09-14_13-40/jobs/pushbackuptoGIT/builds/11/log
+ create mode 100644 FULL-2021-09-14_13-40/jobs/pushbackuptoGIT/builds/12/build.xml
+ create mode 100644 FULL-2021-09-14_13-40/jobs/pushbackuptoGIT/builds/12/changelog.xml
+ create mode 100644 FULL-2021-09-14_13-40/jobs/pushbackuptoGIT/builds/12/log
+ create mode 100644 FULL-2021-09-14_13-40/jobs/pushbackuptoGIT/builds/13/build.xml
+ create mode 100644 FULL-2021-09-14_13-40/jobs/pushbackuptoGIT/builds/13/changelog.xml
+ create mode 100644 FULL-2021-09-14_13-40/jobs/pushbackuptoGIT/builds/13/log
+ create mode 100644 FULL-2021-09-14_13-40/jobs/pushbackuptoGIT/builds/14/build.xml
+ create mode 100644 FULL-2021-09-14_13-40/jobs/pushbackuptoGIT/builds/14/changelog.xml
+ create mode 100644 FULL-2021-09-14_13-40/jobs/pushbackuptoGIT/builds/14/log
+ create mode 100644 FULL-2021-09-14_13-40/jobs/pushbackuptoGIT/builds/15/build.xml
+ create mode 100644 FULL-2021-09-14_13-40/jobs/pushbackuptoGIT/builds/15/changelog.xml
+ create mode 100644 FULL-2021-09-14_13-40/jobs/pushbackuptoGIT/builds/15/log
+ create mode 100644 FULL-2021-09-14_13-40/jobs/pushbackuptoGIT/builds/16/build.xml
+ create mode 100644 FULL-2021-09-14_13-40/jobs/pushbackuptoGIT/builds/16/changelog.xml
+ create mode 100644 FULL-2021-09-14_13-40/jobs/pushbackuptoGIT/builds/16/log
+ create mode 100644 FULL-2021-09-14_13-40/jobs/pushbackuptoGIT/builds/17/build.xml
+ create mode 100644 FULL-2021-09-14_13-40/jobs/pushbackuptoGIT/builds/17/changelog.xml
+ create mode 100644 FULL-2021-09-14_13-40/jobs/pushbackuptoGIT/builds/17/log
+ create mode 100644 FULL-2021-09-14_13-40/jobs/pushbackuptoGIT/builds/18/build.xml
+ create mode 100644 FULL-2021-09-14_13-40/jobs/pushbackuptoGIT/builds/18/changelog.xml
+ create mode 100644 FULL-2021-09-14_13-40/jobs/pushbackuptoGIT/builds/18/log
+ create mode 100644 FULL-2021-09-14_13-40/jobs/pushbackuptoGIT/builds/19/build.xml
+ create mode 100644 FULL-2021-09-14_13-40/jobs/pushbackuptoGIT/builds/19/changelog.xml
+ create mode 100644 FULL-2021-09-14_13-40/jobs/pushbackuptoGIT/builds/19/log
+ create mode 100644 FULL-2021-09-14_13-40/jobs/pushbackuptoGIT/builds/2/build.xml
+ create mode 100644 FULL-2021-09-14_13-40/jobs/pushbackuptoGIT/builds/2/changelog.xml
+ create mode 100644 FULL-2021-09-14_13-40/jobs/pushbackuptoGIT/builds/2/log
+ create mode 100644 FULL-2021-09-14_13-40/jobs/pushbackuptoGIT/builds/20/build.xml
+ create mode 100644 FULL-2021-09-14_13-40/jobs/pushbackuptoGIT/builds/20/changelog.xml
+ create mode 100644 FULL-2021-09-14_13-40/jobs/pushbackuptoGIT/builds/20/log
+ create mode 100644 FULL-2021-09-14_13-40/jobs/pushbackuptoGIT/builds/21/build.xml
+ create mode 100644 FULL-2021-09-14_13-40/jobs/pushbackuptoGIT/builds/21/changelog.xml
+ create mode 100644 FULL-2021-09-14_13-40/jobs/pushbackuptoGIT/builds/21/log
+ create mode 100644 FULL-2021-09-14_13-40/jobs/pushbackuptoGIT/builds/22/build.xml
+ create mode 100644 FULL-2021-09-14_13-40/jobs/pushbackuptoGIT/builds/22/changelog.xml
+ create mode 100644 FULL-2021-09-14_13-40/jobs/pushbackuptoGIT/builds/22/log
+ create mode 100644 FULL-2021-09-14_13-40/jobs/pushbackuptoGIT/builds/3/build.xml
+ create mode 100644 FULL-2021-09-14_13-40/jobs/pushbackuptoGIT/builds/3/changelog.xml
+ create mode 100644 FULL-2021-09-14_13-40/jobs/pushbackuptoGIT/builds/3/log
+ create mode 100644 FULL-2021-09-14_13-40/jobs/pushbackuptoGIT/builds/4/build.xml
+ create mode 100644 FULL-2021-09-14_13-40/jobs/pushbackuptoGIT/builds/4/changelog.xml
+ create mode 100644 FULL-2021-09-14_13-40/jobs/pushbackuptoGIT/builds/4/log
+ create mode 100644 FULL-2021-09-14_13-40/jobs/pushbackuptoGIT/builds/5/build.xml
+ create mode 100644 FULL-2021-09-14_13-40/jobs/pushbackuptoGIT/builds/5/changelog.xml
+ create mode 100644 FULL-2021-09-14_13-40/jobs/pushbackuptoGIT/builds/5/log
+ create mode 100644 FULL-2021-09-14_13-40/jobs/pushbackuptoGIT/builds/6/build.xml
+ create mode 100644 FULL-2021-09-14_13-40/jobs/pushbackuptoGIT/builds/6/changelog.xml
+ create mode 100644 FULL-2021-09-14_13-40/jobs/pushbackuptoGIT/builds/6/log
+ create mode 100644 FULL-2021-09-14_13-40/jobs/pushbackuptoGIT/builds/7/build.xml
+ create mode 100644 FULL-2021-09-14_13-40/jobs/pushbackuptoGIT/builds/7/changelog.xml
+ create mode 100644 FULL-2021-09-14_13-40/jobs/pushbackuptoGIT/builds/7/log
+ create mode 100644 FULL-2021-09-14_13-40/jobs/pushbackuptoGIT/builds/8/build.xml
+ create mode 100644 FULL-2021-09-14_13-40/jobs/pushbackuptoGIT/builds/8/changelog.xml
+ create mode 100644 FULL-2021-09-14_13-40/jobs/pushbackuptoGIT/builds/8/log
+ create mode 100644 FULL-2021-09-14_13-40/jobs/pushbackuptoGIT/builds/9/build.xml
+ create mode 100644 FULL-2021-09-14_13-40/jobs/pushbackuptoGIT/builds/9/changelog.xml
+ create mode 100644 FULL-2021-09-14_13-40/jobs/pushbackuptoGIT/builds/9/log
+ create mode 100644 FULL-2021-09-14_13-40/jobs/pushbackuptoGIT/builds/legacyIds
+ create mode 100644 FULL-2021-09-14_13-40/jobs/pushbackuptoGIT/builds/permalinks
+ create mode 100644 FULL-2021-09-14_13-40/jobs/pushbackuptoGIT/config.xml
+ create mode 100644 FULL-2021-09-14_13-40/jobs/testJob/builds/1/build.xml
+ create mode 100644 FULL-2021-09-14_13-40/jobs/testJob/builds/1/changelog.xml
+ create mode 100644 FULL-2021-09-14_13-40/jobs/testJob/builds/1/log
+ create mode 100644 FULL-2021-09-14_13-40/jobs/testJob/builds/legacyIds
+ create mode 100644 FULL-2021-09-14_13-40/jobs/testJob/builds/permalinks
+ create mode 100644 FULL-2021-09-14_13-40/jobs/testJob/config.xml
+ create mode 100644 FULL-2021-09-14_13-40/nodeMonitors.xml
+ create mode 100644 FULL-2021-09-14_13-40/org.jenkins.plugins.lockableresources.LockableResourcesManager.xml
+ create mode 100644 FULL-2021-09-14_13-40/org.jenkinsci.plugins.github_branch_source.GitHubConfiguration.xml
+ create mode 100644 FULL-2021-09-14_13-40/org.jenkinsci.plugins.workflow.flow.GlobalDefaultFlowDurabilityLevel.xml
+ create mode 100644 FULL-2021-09-14_13-40/org.jenkinsci.plugins.workflow.libs.GlobalLibraries.xml
+ create mode 100644 FULL-2021-09-14_13-40/queue.xml
+ create mode 100644 FULL-2021-09-14_13-40/scriptApproval.xml
+ create mode 100644 FULL-2021-09-14_13-40/thinBackup.xml
+ create mode 100644 FULL-2021-09-14_13-40/users/admin_8689356076305939244/config.xml
+ create mode 100644 FULL-2021-09-14_13-40/users/users.xml
++ git push -u origin master
+To github.com:sushantbhatnagar/jenkinsBackup.git
+   30b1569..7268ad8  master -> master
+Branch 'master' set up to track remote branch 'master' from 'origin'.
++ echo Backup pushed successfully
+Backup pushed successfully
++ rm -r FULL-2021-09-14_13-40
++ echo Removed the folder from the backup
+Removed the folder from the backup
+Finished: SUCCESS
