@@ -1,0 +1,37 @@
+<?xml version='1.1' encoding='UTF-8'?>
+<scriptApproval plugin="script-security@1.78">
+  <approvedScriptHashes>
+    <string>017d0db438428731cd600b6ebda805065433520f</string>
+  </approvedScriptHashes>
+  <approvedSignatures/>
+  <aclApprovedSignatures/>
+  <approvedClasspathEntries/>
+  <pendingScripts>
+    <pendingScript>
+      <context>
+        <item>seedJob</item>
+      </context>
+      <script>job(&apos;NodeJS example with DSL&apos;) {
+    scm {
+        git(&apos;https://github.com/sushantbhatnagar/JenkinsCICD.git&apos;) {  node -&gt; // is hudson.plugins.git.GitSCM
+            node / gitConfigName(&apos;Sushant Bhatnagar&apos;)
+            node / gitConfigEmail(&apos;sushantbhatnagar91@gmail.com&apos;)
+        }
+    }
+    triggers {
+        scm(&apos;H/5 * * * *&apos;)
+    }
+    wrappers {
+        nodejs(&apos;NodeJS&apos;) // this is the name of the NodeJS installation in 
+                         // Manage Jenkins -&gt; Configure Tools -&gt; NodeJS Installations -&gt; Name
+    }
+    steps {
+        shell(&quot;npm install&quot;)
+    }
+}</script>
+      <language>groovy</language>
+    </pendingScript>
+  </pendingScripts>
+  <pendingSignatures/>
+  <pendingClasspathEntries/>
+</scriptApproval>
