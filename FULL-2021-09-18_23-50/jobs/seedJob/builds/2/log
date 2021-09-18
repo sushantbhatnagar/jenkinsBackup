@@ -1,0 +1,23 @@
+Started by user [8mha:////4DbZC1UsXgjxkqApvfSysVeSK1YbDpnrOZRXj4b2klfHAAAAlx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzWEgZu/dLi1CL9xJTczDwAj6GcLcAAAAA=[0madmin
+Running as SYSTEM
+Building in workspace /var/jenkins_home/workspace/seedJob
+The recommended git tool is: NONE
+No credentials specified
+Cloning the remote Git repository
+Cloning repository https://github.com/sushantbhatnagar/JenkinsCICD.git
+ > git init /var/jenkins_home/workspace/seedJob # timeout=10
+Fetching upstream changes from https://github.com/sushantbhatnagar/JenkinsCICD.git
+ > git --version # timeout=10
+ > git --version # 'git version 2.30.2'
+ > git fetch --tags --force --progress -- https://github.com/sushantbhatnagar/JenkinsCICD.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git config remote.origin.url https://github.com/sushantbhatnagar/JenkinsCICD.git # timeout=10
+ > git config --add remote.origin.fetch +refs/heads/*:refs/remotes/origin/* # timeout=10
+Avoid second fetch
+ > git rev-parse refs/remotes/origin/master^{commit} # timeout=10
+Checking out Revision a8ff42dad8154c250e009917a3028d470c67de35 (refs/remotes/origin/master)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f a8ff42dad8154c250e009917a3028d470c67de35 # timeout=10
+Commit message: "Added a job with DSL - nodejs example app"
+First time build. Skipping changelog.
+ERROR: no Job DSL script(s) found at JenkinsCICD/01_NodeJs_DSL.txt
+Finished: FAILURE
