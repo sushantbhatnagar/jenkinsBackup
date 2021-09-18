@@ -1,0 +1,20 @@
+Started on Sep 18, 2021, 10:35:00 AM
+Polling SCM changes on master
+Using strategy: Default
+[poll] Last Built Revision: Revision ab6128aff1e7c2445024110cf6b578c3a8ecd09c (origin/master, refs/tags/jenkins-NodeJS_example_with_DSL-1)
+The recommended git tool is: NONE
+No credentials specified
+ > git rev-parse --resolve-git-dir /var/jenkins_home/workspace/NodeJS example with DSL/.git # timeout=10
+Fetching changes from the remote Git repositories
+ > git config remote.origin.url https://github.com/sushantbhatnagar/JenkinsCICD.git # timeout=10
+Fetching upstream changes from https://github.com/sushantbhatnagar/JenkinsCICD.git
+ > git --version # timeout=10
+ > git --version # 'git version 2.30.2'
+ > git fetch --tags --force --progress -- https://github.com/sushantbhatnagar/JenkinsCICD.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+Polling for changes in
+Seen branch in repository origin/master
+Seen 1 remote branch
+ > git show-ref --tags -d # timeout=10
+ > git log --full-history --no-abbrev --format=raw -M -m ab6128aff1e7c2445024110cf6b578c3a8ecd09c..b54d30d6c5a8090d30eb59773afa86a608a47228 # timeout=10
+Done. Took 1 sec
+Changes found

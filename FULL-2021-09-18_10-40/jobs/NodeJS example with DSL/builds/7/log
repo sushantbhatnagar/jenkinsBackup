@@ -1,0 +1,48 @@
+Started by an SCM change
+Running as SYSTEM
+Building in workspace /var/jenkins_home/workspace/NodeJS example with DSL
+The recommended git tool is: NONE
+No credentials specified
+ > git rev-parse --resolve-git-dir /var/jenkins_home/workspace/NodeJS example with DSL/.git # timeout=10
+Fetching changes from the remote Git repository
+ > git config remote.origin.url https://github.com/sushantbhatnagar/docker-demo.git # timeout=10
+Fetching upstream changes from https://github.com/sushantbhatnagar/docker-demo.git
+ > git --version # timeout=10
+ > git --version # 'git version 2.30.2'
+ > git fetch --tags --force --progress -- https://github.com/sushantbhatnagar/docker-demo.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+Seen branch in repository origin/master
+Seen branch in repository origin/v1.0.1
+Seen branch in repository origin/v1.0.2
+Seen 3 remote branches
+ > git show-ref --tags -d # timeout=10
+Multiple candidate revisions
+Scheduling another build to catch up with NodeJS example with DSL
+Checking out Revision 27acec8f8485f92ee938d282415c9e062fb17cf6 (origin/v1.0.2)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f 27acec8f8485f92ee938d282415c9e062fb17cf6 # timeout=10
+Commit message: "dependencies bump"
+First time build. Skipping changelog.
+ > git tag -a -f -m Jenkins Build #7 jenkins-NodeJS_example_with_DSL-7 # timeout=10
+[NodeJS example with DSL] $ /bin/sh -xe /tmp/jenkins18188451171249001686.sh
++ npm install
+npm WARN old lockfile 
+npm WARN old lockfile The package-lock.json file was created with an old version of npm,
+npm WARN old lockfile so supplemental metadata must be fetched from the registry.
+npm WARN old lockfile 
+npm WARN old lockfile This is a one-time fix-up, please be patient...
+npm WARN old lockfile 
+npm WARN EBADENGINE Unsupported engine {
+npm WARN EBADENGINE   package: 'myapp@0.0.1',
+npm WARN EBADENGINE   required: { node: '^12' },
+npm WARN EBADENGINE   current: { node: 'v16.9.1', npm: '7.21.1' }
+npm WARN EBADENGINE }
+npm WARN deprecated mkdirp@0.5.4: Legacy versions of mkdirp are no longer supported. Please update to mkdirp 1.x. (Note that the API surface has changed to use Promises in 1.x.)
+npm WARN deprecated debug@3.2.6: Debug versions >=3.2.0 <3.2.7 || >=4 <4.3.1 have a low-severity ReDos regression when used in a Node.js environment. It is recommended you upgrade to 3.2.7 or 4.3.1. (https://github.com/visionmedia/debug/issues/797)
+
+added 87 packages, removed 17 packages, changed 39 packages, and audited 165 packages in 9s
+
+27 packages are looking for funding
+  run `npm fund` for details
+
+found 0 vulnerabilities
+Finished: SUCCESS

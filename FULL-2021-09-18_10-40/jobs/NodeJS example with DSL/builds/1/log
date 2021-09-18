@@ -1,0 +1,38 @@
+Started by an SCM change
+Running as SYSTEM
+Building in workspace /var/jenkins_home/workspace/NodeJS example with DSL
+The recommended git tool is: NONE
+No credentials specified
+Cloning the remote Git repository
+Cloning repository https://github.com/sushantbhatnagar/JenkinsCICD.git
+ > git init /var/jenkins_home/workspace/NodeJS example with DSL # timeout=10
+Fetching upstream changes from https://github.com/sushantbhatnagar/JenkinsCICD.git
+ > git --version # timeout=10
+ > git --version # 'git version 2.30.2'
+ > git fetch --tags --force --progress -- https://github.com/sushantbhatnagar/JenkinsCICD.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git config remote.origin.url https://github.com/sushantbhatnagar/JenkinsCICD.git # timeout=10
+ > git config --add remote.origin.fetch +refs/heads/*:refs/remotes/origin/* # timeout=10
+Avoid second fetch
+Seen branch in repository origin/master
+Seen 1 remote branch
+ > git show-ref --tags -d # timeout=10
+Checking out Revision ab6128aff1e7c2445024110cf6b578c3a8ecd09c (origin/master)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f ab6128aff1e7c2445024110cf6b578c3a8ecd09c # timeout=10
+Commit message: "Renamed file"
+First time build. Skipping changelog.
+ > git tag -a -f -m Jenkins Build #1 jenkins-NodeJS_example_with_DSL-1 # timeout=10
+[NodeJS example with DSL] $ /bin/sh -xe /tmp/jenkins17765841471966322162.sh
++ npm install
+npm ERR! code ENOENT
+npm ERR! syscall open
+npm ERR! path /var/jenkins_home/workspace/NodeJS example with DSL/package.json
+npm ERR! errno -2
+npm ERR! enoent ENOENT: no such file or directory, open '/var/jenkins_home/workspace/NodeJS example with DSL/package.json'
+npm ERR! enoent This is related to npm not being able to find a file.
+npm ERR! enoent 
+
+npm ERR! A complete log of this run can be found in:
+npm ERR!     /var/jenkins_home/.npm/_logs/2021-09-18T10_20_11_996Z-debug.log
+Build step 'Execute shell' marked build as failure
+Finished: FAILURE
