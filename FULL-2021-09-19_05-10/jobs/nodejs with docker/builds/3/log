@@ -1,0 +1,83 @@
+Started by user [8mha:////4DbZC1UsXgjxkqApvfSysVeSK1YbDpnrOZRXj4b2klfHAAAAlx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzWEgZu/dLi1CL9xJTczDwAj6GcLcAAAAA=[0madmin
+Running as SYSTEM
+Building in workspace /var/jenkins_home/workspace/nodejs with docker
+The recommended git tool is: NONE
+No credentials specified
+ > git rev-parse --resolve-git-dir /var/jenkins_home/workspace/nodejs with docker/.git # timeout=10
+Fetching changes from the remote Git repository
+ > git config remote.origin.url https://github.com/wardviaene/docker-demo.git # timeout=10
+Fetching upstream changes from https://github.com/wardviaene/docker-demo.git
+ > git --version # timeout=10
+ > git --version # 'git version 2.30.2'
+ > git fetch --tags --force --progress -- https://github.com/wardviaene/docker-demo.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git rev-parse refs/remotes/origin/master^{commit} # timeout=10
+Checking out Revision 60e6c11240f1e29dbef8df67a01ef580ce01cadf (refs/remotes/origin/master)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f 60e6c11240f1e29dbef8df67a01ef580ce01cadf # timeout=10
+Commit message: "node version bump to 12"
+ > git rev-list --no-walk 60e6c11240f1e29dbef8df67a01ef580ce01cadf # timeout=10
+[nodejs with docker] $ docker build -t sushantbhatnagar/nodejsdocker0917 --pull=true "/var/jenkins_home/workspace/nodejs with docker"
+Sending build context to Docker daemon  5.645MB
+Step 1/6 : FROM node:12
+12: Pulling from library/node
+Digest: sha256:a8f4083bfbffe6d9f2e568efb6c83f8fee6da9f8496853dbf4fcf6e84b1377a6
+Status: Image is up to date for node:12
+ ---> 3608aabdf542
+Step 2/6 : WORKDIR /app
+ ---> Using cache
+ ---> a93f1fdc99dc
+Step 3/6 : ADD . /app
+ ---> 3b05280818b3
+Step 4/6 : RUN npm install
+ ---> Running in 5a49059c7d53
+updated 94 packages and audited 95 packages in 2.638s
+found 1 low severity vulnerability
+  run `npm audit fix` to fix them, or `npm audit` for details
+Removing intermediate container 5a49059c7d53
+ ---> 5c44e4bb2c0c
+Step 5/6 : EXPOSE 3000
+ ---> Running in bec6de6ee3e0
+Removing intermediate container bec6de6ee3e0
+ ---> c4796890ed08
+Step 6/6 : CMD npm start
+ ---> Running in 1c06342674de
+Removing intermediate container 1c06342674de
+ ---> 042aa2b7c39e
+Successfully built 042aa2b7c39e
+Successfully tagged sushantbhatnagar/nodejsdocker0917:latest
+[nodejs with docker] $ docker inspect 042aa2b7c39e
+[nodejs with docker] $ docker push sushantbhatnagar/nodejsdocker0917
+The push refers to repository [docker.io/sushantbhatnagar/nodejsdocker0917]
+95518e1b3b60: Preparing
+e280f04b701e: Preparing
+359e6f652577: Preparing
+771257a158d6: Preparing
+b6019bafeb55: Preparing
+fb06db12bfb5: Preparing
+25eb2b9941f5: Preparing
+d93a99120f35: Preparing
+c220e047b2ea: Preparing
+4f64319c4c4d: Preparing
+2bb57845e7ce: Preparing
+a41c4ef533ac: Preparing
+fb06db12bfb5: Waiting
+c220e047b2ea: Waiting
+4f64319c4c4d: Waiting
+2bb57845e7ce: Waiting
+a41c4ef533ac: Waiting
+d93a99120f35: Waiting
+25eb2b9941f5: Waiting
+771257a158d6: Layer already exists
+b6019bafeb55: Layer already exists
+359e6f652577: Layer already exists
+fb06db12bfb5: Layer already exists
+25eb2b9941f5: Layer already exists
+d93a99120f35: Layer already exists
+c220e047b2ea: Layer already exists
+4f64319c4c4d: Layer already exists
+2bb57845e7ce: Layer already exists
+a41c4ef533ac: Layer already exists
+e280f04b701e: Pushed
+95518e1b3b60: Pushed
+latest: digest: sha256:31c9b9056aff525fbd287cbee56dd66dfa8abd9128219549b19a7f8481e8d2e7 size: 2844
+Finished: SUCCESS
