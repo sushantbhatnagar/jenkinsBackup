@@ -1,0 +1,24 @@
+Started by user [8mha:////4DbZC1UsXgjxkqApvfSysVeSK1YbDpnrOZRXj4b2klfHAAAAlx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzWEgZu/dLi1CL9xJTczDwAj6GcLcAAAAA=[0madmin
+Running as SYSTEM
+Building in workspace /var/jenkins_home/workspace/pushbackuptoGIT
+[pushbackuptoGIT] $ /bin/sh -xe /tmp/jenkins7616600660099694685.sh
++ pwd
+/var/jenkins_home/workspace/pushbackuptoGIT
++ cd /var/jenkins_home/backup
++ git add FULL-2021-09-14_10-44 FULL-2021-09-14_10-45 FULL-2021-09-14_10-46 FULL-2021-09-14_10-47 FULL-2021-09-14_10-48
++ git commit -m Jenkins Backup
+Author identity unknown
+
+*** Please tell me who you are.
+
+Run
+
+  git config --global user.email "you@example.com"
+  git config --global user.name "Your Name"
+
+to set your account's default identity.
+Omit --global to set the identity only in this repository.
+
+fatal: unable to auto-detect email address (got 'jenkins@38cf38222615.(none)')
+Build step 'Execute shell' marked build as failure
+Finished: FAILURE
