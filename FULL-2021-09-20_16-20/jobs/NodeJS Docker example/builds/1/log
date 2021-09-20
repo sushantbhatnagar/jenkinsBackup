@@ -1,0 +1,124 @@
+Started by user [8mha:////4DbZC1UsXgjxkqApvfSysVeSK1YbDpnrOZRXj4b2klfHAAAAlx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzWEgZu/dLi1CL9xJTczDwAj6GcLcAAAAA=[0madmin
+Running as SYSTEM
+Building in workspace /var/jenkins_home/workspace/NodeJS Docker example
+The recommended git tool is: NONE
+No credentials specified
+Cloning the remote Git repository
+Cloning repository https://github.com/sushantbhatnagar/docker-demo.git
+ > git init /var/jenkins_home/workspace/NodeJS Docker example # timeout=10
+Fetching upstream changes from https://github.com/sushantbhatnagar/docker-demo.git
+ > git --version # timeout=10
+ > git --version # 'git version 2.30.2'
+ > git fetch --tags --force --progress -- https://github.com/sushantbhatnagar/docker-demo.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git config remote.origin.url https://github.com/sushantbhatnagar/docker-demo.git # timeout=10
+ > git config --add remote.origin.fetch +refs/heads/*:refs/remotes/origin/* # timeout=10
+Avoid second fetch
+Seen branch in repository origin/master
+Seen branch in repository origin/v1.0.1
+Seen branch in repository origin/v1.0.2
+Seen 3 remote branches
+ > git show-ref --tags -d # timeout=10
+Multiple candidate revisions
+Scheduling another build to catch up with NodeJS Docker example
+Checking out Revision 60e6c11240f1e29dbef8df67a01ef580ce01cadf (origin/master)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f 60e6c11240f1e29dbef8df67a01ef580ce01cadf # timeout=10
+Commit message: "node version bump to 12"
+First time build. Skipping changelog.
+ > git tag -a -f -m Jenkins Build #1 jenkins-NodeJS_Docker_example-1 # timeout=10
+[NodeJS Docker example] $ docker build -t sushantbhatnagar/nodejsdockerdsl:60e6c1124 "/var/jenkins_home/workspace/NodeJS Docker example"
+Sending build context to Docker daemon  222.7kB
+Step 1/6 : FROM node:12
+ ---> 3608aabdf542
+Step 2/6 : WORKDIR /app
+ ---> Using cache
+ ---> a93f1fdc99dc
+Step 3/6 : ADD . /app
+ ---> 510832d8672c
+Step 4/6 : RUN npm install
+ ---> Running in ca7450974fba
+added 94 packages from 485 contributors and audited 95 packages in 2.235s
+found 1 low severity vulnerability
+  run `npm audit fix` to fix them, or `npm audit` for details
+Removing intermediate container ca7450974fba
+ ---> d42038c7864d
+Step 5/6 : EXPOSE 3000
+ ---> Running in 2d0319dccbec
+Removing intermediate container 2d0319dccbec
+ ---> 1704f041d1ac
+Step 6/6 : CMD npm start
+ ---> Running in a04193f5b54f
+Removing intermediate container a04193f5b54f
+ ---> ae33318c5f00
+Successfully built ae33318c5f00
+Successfully tagged sushantbhatnagar/nodejsdockerdsl:60e6c1124
+[NodeJS Docker example] $ docker tag ae33318c5f00 sushantbhatnagar/nodejsdockerdsl:latest
+[NodeJS Docker example] $ docker push sushantbhatnagar/nodejsdockerdsl:60e6c1124
+The push refers to repository [docker.io/sushantbhatnagar/nodejsdockerdsl]
+201b09d8c4ed: Preparing
+66b7ff0161c6: Preparing
+359e6f652577: Preparing
+771257a158d6: Preparing
+b6019bafeb55: Preparing
+fb06db12bfb5: Preparing
+25eb2b9941f5: Preparing
+d93a99120f35: Preparing
+c220e047b2ea: Preparing
+4f64319c4c4d: Preparing
+2bb57845e7ce: Preparing
+a41c4ef533ac: Preparing
+fb06db12bfb5: Waiting
+25eb2b9941f5: Waiting
+d93a99120f35: Waiting
+c220e047b2ea: Waiting
+4f64319c4c4d: Waiting
+2bb57845e7ce: Waiting
+a41c4ef533ac: Waiting
+b6019bafeb55: Mounted from sushantbhatnagar/nodejsdocker0917
+359e6f652577: Mounted from sushantbhatnagar/nodejsdocker0917
+771257a158d6: Mounted from sushantbhatnagar/nodejsdocker0917
+66b7ff0161c6: Pushed
+25eb2b9941f5: Mounted from sushantbhatnagar/nodejsdocker0917
+fb06db12bfb5: Mounted from sushantbhatnagar/nodejsdocker0917
+d93a99120f35: Mounted from sushantbhatnagar/nodejsdocker0917
+201b09d8c4ed: Pushed
+c220e047b2ea: Mounted from sushantbhatnagar/nodejsdocker0917
+4f64319c4c4d: Mounted from sushantbhatnagar/nodejsdocker0917
+2bb57845e7ce: Mounted from sushantbhatnagar/nodejsdocker0917
+a41c4ef533ac: Mounted from sushantbhatnagar/nodejsdocker0917
+60e6c1124: digest: sha256:7878747cd66adbc3677421e1925f3e05b9b2ea89c69b4de91a94d3e018259452 size: 2842
+[NodeJS Docker example] $ docker push sushantbhatnagar/nodejsdockerdsl:latest
+The push refers to repository [docker.io/sushantbhatnagar/nodejsdockerdsl]
+201b09d8c4ed: Preparing
+66b7ff0161c6: Preparing
+359e6f652577: Preparing
+771257a158d6: Preparing
+b6019bafeb55: Preparing
+fb06db12bfb5: Preparing
+25eb2b9941f5: Preparing
+d93a99120f35: Preparing
+c220e047b2ea: Preparing
+4f64319c4c4d: Preparing
+2bb57845e7ce: Preparing
+a41c4ef533ac: Preparing
+fb06db12bfb5: Waiting
+25eb2b9941f5: Waiting
+d93a99120f35: Waiting
+c220e047b2ea: Waiting
+4f64319c4c4d: Waiting
+2bb57845e7ce: Waiting
+a41c4ef533ac: Waiting
+b6019bafeb55: Layer already exists
+771257a158d6: Layer already exists
+66b7ff0161c6: Layer already exists
+201b09d8c4ed: Layer already exists
+359e6f652577: Layer already exists
+25eb2b9941f5: Layer already exists
+d93a99120f35: Layer already exists
+fb06db12bfb5: Layer already exists
+c220e047b2ea: Layer already exists
+4f64319c4c4d: Layer already exists
+2bb57845e7ce: Layer already exists
+a41c4ef533ac: Layer already exists
+latest: digest: sha256:7878747cd66adbc3677421e1925f3e05b9b2ea89c69b4de91a94d3e018259452 size: 2842
+Finished: SUCCESS
