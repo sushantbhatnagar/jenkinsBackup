@@ -1,0 +1,128 @@
+Started by an SCM change
+Running as SYSTEM
+Building in workspace /var/jenkins_home/workspace/NodeJS Docker example
+The recommended git tool is: NONE
+No credentials specified
+ > git rev-parse --resolve-git-dir /var/jenkins_home/workspace/NodeJS Docker example/.git # timeout=10
+Fetching changes from the remote Git repository
+ > git config remote.origin.url https://github.com/sushantbhatnagar/docker-demo.git # timeout=10
+Fetching upstream changes from https://github.com/sushantbhatnagar/docker-demo.git
+ > git --version # timeout=10
+ > git --version # 'git version 2.30.2'
+ > git fetch --tags --force --progress -- https://github.com/sushantbhatnagar/docker-demo.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+Seen branch in repository origin/master
+Seen branch in repository origin/v1.0.1
+Seen branch in repository origin/v1.0.2
+Seen 3 remote branches
+ > git show-ref --tags -d # timeout=10
+Multiple candidate revisions
+Scheduling another build to catch up with NodeJS Docker example
+Checking out Revision 27acec8f8485f92ee938d282415c9e062fb17cf6 (origin/v1.0.2)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f 27acec8f8485f92ee938d282415c9e062fb17cf6 # timeout=10
+Commit message: "dependencies bump"
+First time build. Skipping changelog.
+ > git tag -a -f -m Jenkins Build #2 jenkins-NodeJS_Docker_example-2 # timeout=10
+[NodeJS Docker example] $ docker build -t sushantbhatnagar/nodejsdockerdsl:27acec8f8 "/var/jenkins_home/workspace/NodeJS Docker example"
+Sending build context to Docker daemon  198.1kB
+Step 1/6 : FROM node:12
+ ---> 3608aabdf542
+Step 2/6 : WORKDIR /app
+ ---> Using cache
+ ---> a93f1fdc99dc
+Step 3/6 : ADD . /app
+ ---> fa5c530bc0b2
+Step 4/6 : RUN npm install
+ ---> Running in 8c0626678d73
+[91mnpm[0m[91m [0m[91mWARN[0m[91m [0m[91mdeprecated[0m[91m debug@3.2.6: Debug versions >=3.2.0 <3.2.7 || >=4 <4.3.1 have a low-severity ReDos regression when used in a Node.js environment. It is recommended you upgrade to 3.2.7 or 4.3.1. (https://github.com/visionmedia/debug/issues/797)
+[0m[91mnpm WARN deprecated mkdirp@0.5.4: Legacy versions of mkdirp are no longer supported. Please update to mkdirp 1.x. (Note that the API surface has changed to use Promises in 1.x.)
+[0m[91mnpm[0m[91m [0m[91mnotice[0m[91m created a lockfile as package-lock.json. You should commit this file.
+[0madded 165 packages from 557 contributors and audited 165 packages in 5.232s
+
+27 packages are looking for funding
+  run `npm fund` for details
+
+found 0 vulnerabilities
+
+Removing intermediate container 8c0626678d73
+ ---> 7de47c367edd
+Step 5/6 : EXPOSE 3000
+ ---> Running in c38feedd90c5
+Removing intermediate container c38feedd90c5
+ ---> 61c769f84fe2
+Step 6/6 : CMD npm start
+ ---> Running in 5d41f26cd240
+Removing intermediate container 5d41f26cd240
+ ---> 76c0560ee760
+Successfully built 76c0560ee760
+Successfully tagged sushantbhatnagar/nodejsdockerdsl:27acec8f8
+[NodeJS Docker example] $ docker tag 76c0560ee760 sushantbhatnagar/nodejsdockerdsl:latest
+[NodeJS Docker example] $ docker push sushantbhatnagar/nodejsdockerdsl:27acec8f8
+The push refers to repository [docker.io/sushantbhatnagar/nodejsdockerdsl]
+d2da0bc4240e: Preparing
+410b77c75bb4: Preparing
+359e6f652577: Preparing
+771257a158d6: Preparing
+b6019bafeb55: Preparing
+fb06db12bfb5: Preparing
+25eb2b9941f5: Preparing
+d93a99120f35: Preparing
+c220e047b2ea: Preparing
+fb06db12bfb5: Waiting
+25eb2b9941f5: Waiting
+d93a99120f35: Waiting
+c220e047b2ea: Waiting
+4f64319c4c4d: Preparing
+2bb57845e7ce: Preparing
+a41c4ef533ac: Preparing
+4f64319c4c4d: Waiting
+2bb57845e7ce: Waiting
+a41c4ef533ac: Waiting
+771257a158d6: Layer already exists
+b6019bafeb55: Layer already exists
+359e6f652577: Layer already exists
+fb06db12bfb5: Layer already exists
+d93a99120f35: Layer already exists
+25eb2b9941f5: Layer already exists
+c220e047b2ea: Layer already exists
+2bb57845e7ce: Layer already exists
+4f64319c4c4d: Layer already exists
+a41c4ef533ac: Layer already exists
+410b77c75bb4: Pushed
+d2da0bc4240e: Pushed
+27acec8f8: digest: sha256:a22874b4effa335461045e911525f289f1fe86b81a48d6b96ec5409c45fcdab0 size: 2842
+[NodeJS Docker example] $ docker push sushantbhatnagar/nodejsdockerdsl:latest
+The push refers to repository [docker.io/sushantbhatnagar/nodejsdockerdsl]
+d2da0bc4240e: Preparing
+410b77c75bb4: Preparing
+359e6f652577: Preparing
+771257a158d6: Preparing
+b6019bafeb55: Preparing
+fb06db12bfb5: Preparing
+25eb2b9941f5: Preparing
+d93a99120f35: Preparing
+c220e047b2ea: Preparing
+4f64319c4c4d: Preparing
+2bb57845e7ce: Preparing
+a41c4ef533ac: Preparing
+c220e047b2ea: Waiting
+4f64319c4c4d: Waiting
+2bb57845e7ce: Waiting
+a41c4ef533ac: Waiting
+25eb2b9941f5: Waiting
+fb06db12bfb5: Waiting
+d93a99120f35: Waiting
+359e6f652577: Layer already exists
+d2da0bc4240e: Layer already exists
+771257a158d6: Layer already exists
+b6019bafeb55: Layer already exists
+410b77c75bb4: Layer already exists
+fb06db12bfb5: Layer already exists
+c220e047b2ea: Layer already exists
+4f64319c4c4d: Layer already exists
+d93a99120f35: Layer already exists
+25eb2b9941f5: Layer already exists
+2bb57845e7ce: Layer already exists
+a41c4ef533ac: Layer already exists
+latest: digest: sha256:a22874b4effa335461045e911525f289f1fe86b81a48d6b96ec5409c45fcdab0 size: 2842
+Finished: SUCCESS
