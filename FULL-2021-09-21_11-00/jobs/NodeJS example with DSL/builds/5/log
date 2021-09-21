@@ -1,0 +1,48 @@
+Started by an SCM change
+Running as SYSTEM
+Building in workspace /var/jenkins_home/workspace/NodeJS example with DSL
+Selected Git installation does not exist. Using Default
+The recommended git tool is: NONE
+No credentials specified
+ > git rev-parse --resolve-git-dir /var/jenkins_home/workspace/NodeJS example with DSL/.git # timeout=10
+Fetching changes from the remote Git repository
+ > git config remote.origin.url https://github.com/sushantbhatnagar/docker-demo.git # timeout=10
+Fetching upstream changes from https://github.com/sushantbhatnagar/docker-demo.git
+ > git --version # timeout=10
+ > git --version # 'git version 2.30.2'
+ > git fetch --tags --force --progress -- https://github.com/sushantbhatnagar/docker-demo.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+Seen branch in repository origin/master
+Seen branch in repository origin/v1.0.1
+Seen branch in repository origin/v1.0.2
+Seen 3 remote branches
+ > git show-ref --tags -d # timeout=10
+Checking out Revision 7c8fcd5917f19f13a6712ec778e9b042bc5995d1 (origin/master)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f 7c8fcd5917f19f13a6712ec778e9b042bc5995d1 # timeout=10
+Commit message: "Updated NodeJS installation name"
+ > git rev-list --no-walk 60e6c11240f1e29dbef8df67a01ef580ce01cadf # timeout=10
+ > git tag -a -f -m Jenkins Build #5 jenkins-NodeJS_example_with_DSL-5 # timeout=10
+[NodeJS example with DSL] $ /bin/sh -xe /tmp/jenkins11420423092383611840.sh
++ npm install
+npm WARN old lockfile 
+npm WARN old lockfile The package-lock.json file was created with an old version of npm,
+npm WARN old lockfile so supplemental metadata must be fetched from the registry.
+npm WARN old lockfile 
+npm WARN old lockfile This is a one-time fix-up, please be patient...
+npm WARN old lockfile 
+npm WARN EBADENGINE Unsupported engine {
+npm WARN EBADENGINE   package: 'myapp@0.0.1',
+npm WARN EBADENGINE   required: { node: '^4.6.1' },
+npm WARN EBADENGINE   current: { node: 'v16.9.1', npm: '7.21.1' }
+npm WARN EBADENGINE }
+npm WARN deprecated mkdirp@0.5.1: Legacy versions of mkdirp are no longer supported. Please update to mkdirp 1.x. (Note that the API surface has changed to use Promises in 1.x.)
+
+added 94 packages, and audited 95 packages in 2s
+
+3 low severity vulnerabilities
+
+To address all issues (including breaking changes), run:
+  npm audit fix --force
+
+Run `npm audit` for details.
+Finished: SUCCESS
