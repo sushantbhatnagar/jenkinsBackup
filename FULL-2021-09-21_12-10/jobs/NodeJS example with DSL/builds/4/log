@@ -1,0 +1,37 @@
+Started by an SCM change
+Running as SYSTEM
+Building in workspace /var/jenkins_home/workspace/NodeJS example with DSL
+The recommended git tool is: NONE
+No credentials specified
+ > git rev-parse --resolve-git-dir /var/jenkins_home/workspace/NodeJS example with DSL/.git # timeout=10
+Fetching changes from the remote Git repository
+ > git config remote.origin.url https://github.com/sushantbhatnagar/docker-demo.git # timeout=10
+Fetching upstream changes from https://github.com/sushantbhatnagar/docker-demo.git
+ > git --version # timeout=10
+ > git --version # 'git version 2.30.2'
+ > git fetch --tags --force --progress -- https://github.com/sushantbhatnagar/docker-demo.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+Seen branch in repository origin/master
+Seen branch in repository origin/v1.0.1
+Seen branch in repository origin/v1.0.2
+Seen 3 remote branches
+ > git show-ref --tags -d # timeout=10
+Checking out Revision b54d30d6c5a8090d30eb59773afa86a608a47228 (refs/tags/jenkins-NodeJS_example_with_DSL-10, refs/tags/jenkins-NodeJS_example_with_DSL-4, refs/tags/jenkins-NodeJS_example_with_DSL-11, refs/tags/jenkins-NodeJS_example_with_DSL-5, refs/tags/jenkins-NodeJS_example_with_DSL-9)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f b54d30d6c5a8090d30eb59773afa86a608a47228 # timeout=10
+Commit message: "Added new git URL"
+First time build. Skipping changelog.
+ > git tag -a -f -m Jenkins Build #4 jenkins-NodeJS_example_with_DSL-4 # timeout=10
+[NodeJS example with DSL] $ /bin/sh -xe /tmp/jenkins17512018657337842666.sh
++ npm install
+npm ERR! code ENOENT
+npm ERR! syscall open
+npm ERR! path /var/jenkins_home/workspace/NodeJS example with DSL/package.json
+npm ERR! errno -2
+npm ERR! enoent ENOENT: no such file or directory, open '/var/jenkins_home/workspace/NodeJS example with DSL/package.json'
+npm ERR! enoent This is related to npm not being able to find a file.
+npm ERR! enoent 
+
+npm ERR! A complete log of this run can be found in:
+npm ERR!     /var/jenkins_home/.npm/_logs/2021-09-18T10_48_07_725Z-debug.log
+Build step 'Execute shell' marked build as failure
+Finished: FAILURE
