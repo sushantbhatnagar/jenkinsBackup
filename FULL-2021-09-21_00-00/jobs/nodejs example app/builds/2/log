@@ -1,0 +1,43 @@
+Started by user [8mha:////4DbZC1UsXgjxkqApvfSysVeSK1YbDpnrOZRXj4b2klfHAAAAlx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzWEgZu/dLi1CL9xJTczDwAj6GcLcAAAAA=[0madmin
+Running as SYSTEM
+Building in workspace /var/jenkins_home/workspace/nodejs example app
+The recommended git tool is: NONE
+No credentials specified
+ > git rev-parse --resolve-git-dir /var/jenkins_home/workspace/nodejs example app/.git # timeout=10
+Fetching changes from the remote Git repository
+ > git config remote.origin.url https://github.com/wardviaene/docker-demo.git # timeout=10
+Fetching upstream changes from https://github.com/wardviaene/docker-demo.git
+ > git --version # timeout=10
+ > git --version # 'git version 2.30.2'
+ > git fetch --tags --force --progress -- https://github.com/wardviaene/docker-demo.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git rev-parse refs/remotes/origin/master^{commit} # timeout=10
+Checking out Revision 60e6c11240f1e29dbef8df67a01ef580ce01cadf (refs/remotes/origin/master)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f 60e6c11240f1e29dbef8df67a01ef580ce01cadf # timeout=10
+Commit message: "node version bump to 12"
+ > git rev-list --no-walk 60e6c11240f1e29dbef8df67a01ef580ce01cadf # timeout=10
+Unpacking https://nodejs.org/dist/v16.9.1/node-v16.9.1-linux-x64.tar.gz to /var/jenkins_home/tools/jenkins.plugins.nodejs.tools.NodeJSInstallation/NodeJS on Jenkins
+[nodejs example app] $ /bin/sh -xe /tmp/jenkins17262458933605096196.sh
++ npm install
+npm WARN old lockfile 
+npm WARN old lockfile The package-lock.json file was created with an old version of npm,
+npm WARN old lockfile so supplemental metadata must be fetched from the registry.
+npm WARN old lockfile 
+npm WARN old lockfile This is a one-time fix-up, please be patient...
+npm WARN old lockfile 
+npm WARN EBADENGINE Unsupported engine {
+npm WARN EBADENGINE   package: 'myapp@0.0.1',
+npm WARN EBADENGINE   required: { node: '^4.6.1' },
+npm WARN EBADENGINE   current: { node: 'v16.9.1', npm: '7.21.1' }
+npm WARN EBADENGINE }
+npm WARN deprecated mkdirp@0.5.1: Legacy versions of mkdirp are no longer supported. Please update to mkdirp 1.x. (Note that the API surface has changed to use Promises in 1.x.)
+
+added 94 packages, and audited 95 packages in 6s
+
+3 low severity vulnerabilities
+
+To address all issues (including breaking changes), run:
+  npm audit fix --force
+
+Run `npm audit` for details.
+Finished: SUCCESS
