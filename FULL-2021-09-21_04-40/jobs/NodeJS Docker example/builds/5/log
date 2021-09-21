@@ -1,0 +1,120 @@
+Started by an SCM change
+Running as SYSTEM
+Building in workspace /var/jenkins_home/workspace/NodeJS Docker example
+Selected Git installation does not exist. Using Default
+The recommended git tool is: NONE
+No credentials specified
+ > git rev-parse --resolve-git-dir /var/jenkins_home/workspace/NodeJS Docker example/.git # timeout=10
+Fetching changes from the remote Git repository
+ > git config remote.origin.url https://github.com/sushantbhatnagar/docker-demo.git # timeout=10
+Fetching upstream changes from https://github.com/sushantbhatnagar/docker-demo.git
+ > git --version # timeout=10
+ > git --version # 'git version 2.30.2'
+ > git fetch --tags --force --progress -- https://github.com/sushantbhatnagar/docker-demo.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+Seen branch in repository origin/master
+Seen branch in repository origin/v1.0.1
+Seen branch in repository origin/v1.0.2
+Seen 3 remote branches
+ > git show-ref --tags -d # timeout=10
+Checking out Revision 899a210ccf22a53d6e3e11bbc7f2534baa0b458c (origin/master)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f 899a210ccf22a53d6e3e11bbc7f2534baa0b458c # timeout=10
+Commit message: "Updated the docker repo name"
+ > git rev-list --no-walk 7c8fcd5917f19f13a6712ec778e9b042bc5995d1 # timeout=10
+ > git tag -a -f -m Jenkins Build #5 jenkins-NodeJS_Docker_example-5 # timeout=10
+[NodeJS Docker example] $ docker build -t sushantbhatnagar/nodejsdockerdsl:899a210cc "/var/jenkins_home/workspace/NodeJS Docker example"
+Sending build context to Docker daemon  245.2kB
+Step 1/6 : FROM node:12
+ ---> 3608aabdf542
+Step 2/6 : WORKDIR /app
+ ---> Using cache
+ ---> a93f1fdc99dc
+Step 3/6 : ADD . /app
+ ---> 103257215276
+Step 4/6 : RUN npm install
+ ---> Running in 4b6036b4db49
+added 94 packages from 485 contributors and audited 95 packages in 2.03s
+found 1 low severity vulnerability
+  run `npm audit fix` to fix them, or `npm audit` for details
+Removing intermediate container 4b6036b4db49
+ ---> 0ab196f60cd9
+Step 5/6 : EXPOSE 3000
+ ---> Running in 6dc1b54c5e55
+Removing intermediate container 6dc1b54c5e55
+ ---> 5eca29736bea
+Step 6/6 : CMD npm start
+ ---> Running in d9c35e121f10
+Removing intermediate container d9c35e121f10
+ ---> 6aaecf31df7a
+Successfully built 6aaecf31df7a
+Successfully tagged sushantbhatnagar/nodejsdockerdsl:899a210cc
+[NodeJS Docker example] $ docker tag 6aaecf31df7a sushantbhatnagar/nodejsdockerdsl:latest
+[NodeJS Docker example] $ docker push sushantbhatnagar/nodejsdockerdsl:899a210cc
+The push refers to repository [docker.io/sushantbhatnagar/nodejsdockerdsl]
+7f8029910999: Preparing
+a14afa1efd2f: Preparing
+359e6f652577: Preparing
+771257a158d6: Preparing
+b6019bafeb55: Preparing
+fb06db12bfb5: Preparing
+25eb2b9941f5: Preparing
+d93a99120f35: Preparing
+c220e047b2ea: Preparing
+4f64319c4c4d: Preparing
+2bb57845e7ce: Preparing
+a41c4ef533ac: Preparing
+fb06db12bfb5: Waiting
+25eb2b9941f5: Waiting
+d93a99120f35: Waiting
+c220e047b2ea: Waiting
+4f64319c4c4d: Waiting
+2bb57845e7ce: Waiting
+a41c4ef533ac: Waiting
+359e6f652577: Layer already exists
+b6019bafeb55: Layer already exists
+771257a158d6: Layer already exists
+fb06db12bfb5: Layer already exists
+25eb2b9941f5: Layer already exists
+d93a99120f35: Layer already exists
+c220e047b2ea: Layer already exists
+2bb57845e7ce: Layer already exists
+4f64319c4c4d: Layer already exists
+a41c4ef533ac: Layer already exists
+7f8029910999: Pushed
+a14afa1efd2f: Pushed
+899a210cc: digest: sha256:8b8c6494533a0e8379d7d94f38d3fad20c7f39e1b456efe88cd7bd8b1e0fa231 size: 2842
+[NodeJS Docker example] $ docker push sushantbhatnagar/nodejsdockerdsl:latest
+The push refers to repository [docker.io/sushantbhatnagar/nodejsdockerdsl]
+7f8029910999: Preparing
+a14afa1efd2f: Preparing
+359e6f652577: Preparing
+771257a158d6: Preparing
+b6019bafeb55: Preparing
+fb06db12bfb5: Preparing
+25eb2b9941f5: Preparing
+d93a99120f35: Preparing
+c220e047b2ea: Preparing
+4f64319c4c4d: Preparing
+2bb57845e7ce: Preparing
+a41c4ef533ac: Preparing
+d93a99120f35: Waiting
+c220e047b2ea: Waiting
+fb06db12bfb5: Waiting
+25eb2b9941f5: Waiting
+4f64319c4c4d: Waiting
+2bb57845e7ce: Waiting
+a41c4ef533ac: Waiting
+771257a158d6: Layer already exists
+b6019bafeb55: Layer already exists
+a14afa1efd2f: Layer already exists
+7f8029910999: Layer already exists
+359e6f652577: Layer already exists
+fb06db12bfb5: Layer already exists
+25eb2b9941f5: Layer already exists
+c220e047b2ea: Layer already exists
+4f64319c4c4d: Layer already exists
+d93a99120f35: Layer already exists
+2bb57845e7ce: Layer already exists
+a41c4ef533ac: Layer already exists
+latest: digest: sha256:8b8c6494533a0e8379d7d94f38d3fad20c7f39e1b456efe88cd7bd8b1e0fa231 size: 2842
+Finished: SUCCESS
