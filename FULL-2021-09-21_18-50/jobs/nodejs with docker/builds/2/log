@@ -1,0 +1,149 @@
+Started by user [8mha:////4DbZC1UsXgjxkqApvfSysVeSK1YbDpnrOZRXj4b2klfHAAAAlx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzWEgZu/dLi1CL9xJTczDwAj6GcLcAAAAA=[0madmin
+Running as SYSTEM
+Building in workspace /var/jenkins_home/workspace/nodejs with docker
+The recommended git tool is: NONE
+No credentials specified
+ > git rev-parse --resolve-git-dir /var/jenkins_home/workspace/nodejs with docker/.git # timeout=10
+Fetching changes from the remote Git repository
+ > git config remote.origin.url https://github.com/wardviaene/docker-demo.git # timeout=10
+Fetching upstream changes from https://github.com/wardviaene/docker-demo.git
+ > git --version # timeout=10
+ > git --version # 'git version 2.30.2'
+ > git fetch --tags --force --progress -- https://github.com/wardviaene/docker-demo.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git rev-parse refs/remotes/origin/master^{commit} # timeout=10
+Checking out Revision 60e6c11240f1e29dbef8df67a01ef580ce01cadf (refs/remotes/origin/master)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f 60e6c11240f1e29dbef8df67a01ef580ce01cadf # timeout=10
+Commit message: "node version bump to 12"
+ > git rev-list --no-walk 60e6c11240f1e29dbef8df67a01ef580ce01cadf # timeout=10
+[nodejs with docker] $ /bin/sh -xe /tmp/jenkins13073408969922184591.sh
++ npm install
+npm WARN old lockfile 
+npm WARN old lockfile The package-lock.json file was created with an old version of npm,
+npm WARN old lockfile so supplemental metadata must be fetched from the registry.
+npm WARN old lockfile 
+npm WARN old lockfile This is a one-time fix-up, please be patient...
+npm WARN old lockfile 
+npm WARN EBADENGINE Unsupported engine {
+npm WARN EBADENGINE   package: 'myapp@0.0.1',
+npm WARN EBADENGINE   required: { node: '^4.6.1' },
+npm WARN EBADENGINE   current: { node: 'v16.9.1', npm: '7.21.1' }
+npm WARN EBADENGINE }
+
+up to date, audited 95 packages in 1s
+
+3 low severity vulnerabilities
+
+To address all issues (including breaking changes), run:
+  npm audit fix --force
+
+Run `npm audit` for details.
+[nodejs with docker] $ docker build -t sushantbhatnagar/nodejsdocker0917 --pull=true "/var/jenkins_home/workspace/nodejs with docker"
+Sending build context to Docker daemon  5.675MB
+Step 1/6 : FROM node:12
+12: Pulling from library/node
+1c05d83e138c: Pulling fs layer
+394ee1959bac: Pulling fs layer
+4b5f175d1abb: Pulling fs layer
+7885553ee256: Pulling fs layer
+444120dfcd5e: Pulling fs layer
+606c05f39494: Pulling fs layer
+4c04e3502427: Pulling fs layer
+226b042e2b6b: Pulling fs layer
+d32475dabe94: Pulling fs layer
+7885553ee256: Waiting
+444120dfcd5e: Waiting
+606c05f39494: Waiting
+4c04e3502427: Waiting
+226b042e2b6b: Waiting
+d32475dabe94: Waiting
+4b5f175d1abb: Verifying Checksum
+4b5f175d1abb: Download complete
+394ee1959bac: Verifying Checksum
+394ee1959bac: Download complete
+1c05d83e138c: Verifying Checksum
+1c05d83e138c: Download complete
+606c05f39494: Verifying Checksum
+606c05f39494: Download complete
+7885553ee256: Verifying Checksum
+7885553ee256: Download complete
+226b042e2b6b: Verifying Checksum
+226b042e2b6b: Download complete
+4c04e3502427: Verifying Checksum
+4c04e3502427: Download complete
+444120dfcd5e: Verifying Checksum
+444120dfcd5e: Download complete
+d32475dabe94: Verifying Checksum
+d32475dabe94: Download complete
+1c05d83e138c: Pull complete
+394ee1959bac: Pull complete
+4b5f175d1abb: Pull complete
+7885553ee256: Pull complete
+444120dfcd5e: Pull complete
+606c05f39494: Pull complete
+4c04e3502427: Pull complete
+226b042e2b6b: Pull complete
+d32475dabe94: Pull complete
+Digest: sha256:a8f4083bfbffe6d9f2e568efb6c83f8fee6da9f8496853dbf4fcf6e84b1377a6
+Status: Downloaded newer image for node:12
+ ---> 3608aabdf542
+Step 2/6 : WORKDIR /app
+ ---> Running in 950fee70e4d4
+Removing intermediate container 950fee70e4d4
+ ---> a93f1fdc99dc
+Step 3/6 : ADD . /app
+ ---> 0bb1c73b0c23
+Step 4/6 : RUN npm install
+ ---> Running in b91433b8bcf5
+[91mnpm[0m[91m [0m[91mWARN[0m[91m [0m[91mread-shrinkwrap[0m[91m This version of npm is compatible with lockfileVersion@1, but package-lock.json was generated for lockfileVersion@2. I'll try to do my best with it!
+[0mupdated 94 packages and audited 95 packages in 2.559s
+found 1 low severity vulnerability
+  run `npm audit fix` to fix them, or `npm audit` for details
+Removing intermediate container b91433b8bcf5
+ ---> 82ab4e59017f
+Step 5/6 : EXPOSE 3000
+ ---> Running in 5740bb8b61d3
+Removing intermediate container 5740bb8b61d3
+ ---> 8ceb9ab72f6b
+Step 6/6 : CMD npm start
+ ---> Running in c86b1f6643c9
+Removing intermediate container c86b1f6643c9
+ ---> 2732b3535614
+Successfully built 2732b3535614
+Successfully tagged sushantbhatnagar/nodejsdocker0917:latest
+[nodejs with docker] $ docker inspect 2732b3535614
+[nodejs with docker] $ docker push sushantbhatnagar/nodejsdocker0917
+The push refers to repository [docker.io/sushantbhatnagar/nodejsdocker0917]
+a4f4f5c877c9: Preparing
+56787bcb1343: Preparing
+359e6f652577: Preparing
+771257a158d6: Preparing
+b6019bafeb55: Preparing
+fb06db12bfb5: Preparing
+25eb2b9941f5: Preparing
+d93a99120f35: Preparing
+c220e047b2ea: Preparing
+4f64319c4c4d: Preparing
+2bb57845e7ce: Preparing
+a41c4ef533ac: Preparing
+fb06db12bfb5: Waiting
+25eb2b9941f5: Waiting
+d93a99120f35: Waiting
+c220e047b2ea: Waiting
+4f64319c4c4d: Waiting
+2bb57845e7ce: Waiting
+a41c4ef533ac: Waiting
+b6019bafeb55: Mounted from library/node
+771257a158d6: Mounted from library/node
+359e6f652577: Pushed
+fb06db12bfb5: Mounted from library/node
+a4f4f5c877c9: Pushed
+56787bcb1343: Pushed
+25eb2b9941f5: Mounted from library/node
+d93a99120f35: Mounted from library/node
+2bb57845e7ce: Mounted from library/node
+c220e047b2ea: Mounted from library/node
+4f64319c4c4d: Mounted from library/node
+a41c4ef533ac: Mounted from library/node
+latest: digest: sha256:043e9167cd8a69d8ca2572af590d5326e8eea1c54eea358335ada360f9bf12e8 size: 2844
+Finished: SUCCESS
