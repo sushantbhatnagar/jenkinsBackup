@@ -1,0 +1,142 @@
+Started by user [8mha:////4DbZC1UsXgjxkqApvfSysVeSK1YbDpnrOZRXj4b2klfHAAAAlx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzWEgZu/dLi1CL9xJTczDwAj6GcLcAAAAA=[0madmin
+Running as SYSTEM
+Building in workspace /var/jenkins_home/workspace/pushbackuptoGIT
+[pushbackuptoGIT] $ /bin/sh -xe /tmp/jenkins16992913114394153537.sh
++ pwd
+/var/jenkins_home/workspace/pushbackuptoGIT
++ cd /var/jenkins_home/backup
++ git add FULL-2021-09-14_10-57 FULL-2021-09-14_10-58 FULL-2021-09-14_10-59 FULL-2021-09-14_11-00 FULL-2021-09-14_11-01
++ git commit -m Jenkins Backup
+[master 1822987] Jenkins Backup
+ 123 files changed, 4215 insertions(+)
+ create mode 100644 FULL-2021-09-14_10-59/config.xml
+ create mode 100644 FULL-2021-09-14_10-59/hudson.model.UpdateCenter.xml
+ create mode 100644 FULL-2021-09-14_10-59/hudson.plugins.git.GitTool.xml
+ create mode 100644 FULL-2021-09-14_10-59/installedPlugins.xml
+ create mode 100644 FULL-2021-09-14_10-59/jenkins.model.JenkinsLocationConfiguration.xml
+ create mode 100644 FULL-2021-09-14_10-59/jenkins.telemetry.Correlator.xml
+ create mode 100644 FULL-2021-09-14_10-59/jobs/pushbackuptoGIT/builds/1/build.xml
+ create mode 100644 FULL-2021-09-14_10-59/jobs/pushbackuptoGIT/builds/1/changelog.xml
+ create mode 100644 FULL-2021-09-14_10-59/jobs/pushbackuptoGIT/builds/1/log
+ create mode 100644 FULL-2021-09-14_10-59/jobs/pushbackuptoGIT/builds/2/build.xml
+ create mode 100644 FULL-2021-09-14_10-59/jobs/pushbackuptoGIT/builds/2/changelog.xml
+ create mode 100644 FULL-2021-09-14_10-59/jobs/pushbackuptoGIT/builds/2/log
+ create mode 100644 FULL-2021-09-14_10-59/jobs/pushbackuptoGIT/builds/3/build.xml
+ create mode 100644 FULL-2021-09-14_10-59/jobs/pushbackuptoGIT/builds/3/changelog.xml
+ create mode 100644 FULL-2021-09-14_10-59/jobs/pushbackuptoGIT/builds/3/log
+ create mode 100644 FULL-2021-09-14_10-59/jobs/pushbackuptoGIT/builds/4/build.xml
+ create mode 100644 FULL-2021-09-14_10-59/jobs/pushbackuptoGIT/builds/4/changelog.xml
+ create mode 100644 FULL-2021-09-14_10-59/jobs/pushbackuptoGIT/builds/4/log
+ create mode 100644 FULL-2021-09-14_10-59/jobs/pushbackuptoGIT/builds/5/build.xml
+ create mode 100644 FULL-2021-09-14_10-59/jobs/pushbackuptoGIT/builds/5/changelog.xml
+ create mode 100644 FULL-2021-09-14_10-59/jobs/pushbackuptoGIT/builds/5/log
+ create mode 100644 FULL-2021-09-14_10-59/jobs/pushbackuptoGIT/builds/6/build.xml
+ create mode 100644 FULL-2021-09-14_10-59/jobs/pushbackuptoGIT/builds/6/changelog.xml
+ create mode 100644 FULL-2021-09-14_10-59/jobs/pushbackuptoGIT/builds/6/log
+ create mode 100644 FULL-2021-09-14_10-59/jobs/pushbackuptoGIT/builds/7/build.xml
+ create mode 100644 FULL-2021-09-14_10-59/jobs/pushbackuptoGIT/builds/7/changelog.xml
+ create mode 100644 FULL-2021-09-14_10-59/jobs/pushbackuptoGIT/builds/7/log
+ create mode 100644 FULL-2021-09-14_10-59/jobs/pushbackuptoGIT/builds/legacyIds
+ create mode 100644 FULL-2021-09-14_10-59/jobs/pushbackuptoGIT/builds/permalinks
+ create mode 100644 FULL-2021-09-14_10-59/jobs/pushbackuptoGIT/config.xml
+ create mode 100644 FULL-2021-09-14_10-59/jobs/testJob/builds/1/build.xml
+ create mode 100644 FULL-2021-09-14_10-59/jobs/testJob/builds/1/changelog.xml
+ create mode 100644 FULL-2021-09-14_10-59/jobs/testJob/builds/1/log
+ create mode 100644 FULL-2021-09-14_10-59/jobs/testJob/builds/legacyIds
+ create mode 100644 FULL-2021-09-14_10-59/jobs/testJob/builds/permalinks
+ create mode 100644 FULL-2021-09-14_10-59/jobs/testJob/config.xml
+ create mode 100644 FULL-2021-09-14_10-59/nodeMonitors.xml
+ create mode 100644 FULL-2021-09-14_10-59/queue.xml
+ create mode 100644 FULL-2021-09-14_10-59/thinBackup.xml
+ create mode 100644 FULL-2021-09-14_10-59/users/admin_8689356076305939244/config.xml
+ create mode 100644 FULL-2021-09-14_10-59/users/users.xml
+ create mode 100644 FULL-2021-09-14_11-00/config.xml
+ create mode 100644 FULL-2021-09-14_11-00/hudson.model.UpdateCenter.xml
+ create mode 100644 FULL-2021-09-14_11-00/hudson.plugins.git.GitTool.xml
+ create mode 100644 FULL-2021-09-14_11-00/installedPlugins.xml
+ create mode 100644 FULL-2021-09-14_11-00/jenkins.model.JenkinsLocationConfiguration.xml
+ create mode 100644 FULL-2021-09-14_11-00/jenkins.telemetry.Correlator.xml
+ create mode 100644 FULL-2021-09-14_11-00/jobs/pushbackuptoGIT/builds/1/build.xml
+ create mode 100644 FULL-2021-09-14_11-00/jobs/pushbackuptoGIT/builds/1/changelog.xml
+ create mode 100644 FULL-2021-09-14_11-00/jobs/pushbackuptoGIT/builds/1/log
+ create mode 100644 FULL-2021-09-14_11-00/jobs/pushbackuptoGIT/builds/2/build.xml
+ create mode 100644 FULL-2021-09-14_11-00/jobs/pushbackuptoGIT/builds/2/changelog.xml
+ create mode 100644 FULL-2021-09-14_11-00/jobs/pushbackuptoGIT/builds/2/log
+ create mode 100644 FULL-2021-09-14_11-00/jobs/pushbackuptoGIT/builds/3/build.xml
+ create mode 100644 FULL-2021-09-14_11-00/jobs/pushbackuptoGIT/builds/3/changelog.xml
+ create mode 100644 FULL-2021-09-14_11-00/jobs/pushbackuptoGIT/builds/3/log
+ create mode 100644 FULL-2021-09-14_11-00/jobs/pushbackuptoGIT/builds/4/build.xml
+ create mode 100644 FULL-2021-09-14_11-00/jobs/pushbackuptoGIT/builds/4/changelog.xml
+ create mode 100644 FULL-2021-09-14_11-00/jobs/pushbackuptoGIT/builds/4/log
+ create mode 100644 FULL-2021-09-14_11-00/jobs/pushbackuptoGIT/builds/5/build.xml
+ create mode 100644 FULL-2021-09-14_11-00/jobs/pushbackuptoGIT/builds/5/changelog.xml
+ create mode 100644 FULL-2021-09-14_11-00/jobs/pushbackuptoGIT/builds/5/log
+ create mode 100644 FULL-2021-09-14_11-00/jobs/pushbackuptoGIT/builds/6/build.xml
+ create mode 100644 FULL-2021-09-14_11-00/jobs/pushbackuptoGIT/builds/6/changelog.xml
+ create mode 100644 FULL-2021-09-14_11-00/jobs/pushbackuptoGIT/builds/6/log
+ create mode 100644 FULL-2021-09-14_11-00/jobs/pushbackuptoGIT/builds/7/build.xml
+ create mode 100644 FULL-2021-09-14_11-00/jobs/pushbackuptoGIT/builds/7/changelog.xml
+ create mode 100644 FULL-2021-09-14_11-00/jobs/pushbackuptoGIT/builds/7/log
+ create mode 100644 FULL-2021-09-14_11-00/jobs/pushbackuptoGIT/builds/legacyIds
+ create mode 100644 FULL-2021-09-14_11-00/jobs/pushbackuptoGIT/builds/permalinks
+ create mode 100644 FULL-2021-09-14_11-00/jobs/pushbackuptoGIT/config.xml
+ create mode 100644 FULL-2021-09-14_11-00/jobs/testJob/builds/1/build.xml
+ create mode 100644 FULL-2021-09-14_11-00/jobs/testJob/builds/1/changelog.xml
+ create mode 100644 FULL-2021-09-14_11-00/jobs/testJob/builds/1/log
+ create mode 100644 FULL-2021-09-14_11-00/jobs/testJob/builds/legacyIds
+ create mode 100644 FULL-2021-09-14_11-00/jobs/testJob/builds/permalinks
+ create mode 100644 FULL-2021-09-14_11-00/jobs/testJob/config.xml
+ create mode 100644 FULL-2021-09-14_11-00/nodeMonitors.xml
+ create mode 100644 FULL-2021-09-14_11-00/queue.xml
+ create mode 100644 FULL-2021-09-14_11-00/thinBackup.xml
+ create mode 100644 FULL-2021-09-14_11-00/users/admin_8689356076305939244/config.xml
+ create mode 100644 FULL-2021-09-14_11-00/users/users.xml
+ create mode 100644 FULL-2021-09-14_11-01/config.xml
+ create mode 100644 FULL-2021-09-14_11-01/hudson.model.UpdateCenter.xml
+ create mode 100644 FULL-2021-09-14_11-01/hudson.plugins.git.GitTool.xml
+ create mode 100644 FULL-2021-09-14_11-01/installedPlugins.xml
+ create mode 100644 FULL-2021-09-14_11-01/jenkins.model.JenkinsLocationConfiguration.xml
+ create mode 100644 FULL-2021-09-14_11-01/jenkins.telemetry.Correlator.xml
+ create mode 100644 FULL-2021-09-14_11-01/jobs/pushbackuptoGIT/builds/1/build.xml
+ create mode 100644 FULL-2021-09-14_11-01/jobs/pushbackuptoGIT/builds/1/changelog.xml
+ create mode 100644 FULL-2021-09-14_11-01/jobs/pushbackuptoGIT/builds/1/log
+ create mode 100644 FULL-2021-09-14_11-01/jobs/pushbackuptoGIT/builds/2/build.xml
+ create mode 100644 FULL-2021-09-14_11-01/jobs/pushbackuptoGIT/builds/2/changelog.xml
+ create mode 100644 FULL-2021-09-14_11-01/jobs/pushbackuptoGIT/builds/2/log
+ create mode 100644 FULL-2021-09-14_11-01/jobs/pushbackuptoGIT/builds/3/build.xml
+ create mode 100644 FULL-2021-09-14_11-01/jobs/pushbackuptoGIT/builds/3/changelog.xml
+ create mode 100644 FULL-2021-09-14_11-01/jobs/pushbackuptoGIT/builds/3/log
+ create mode 100644 FULL-2021-09-14_11-01/jobs/pushbackuptoGIT/builds/4/build.xml
+ create mode 100644 FULL-2021-09-14_11-01/jobs/pushbackuptoGIT/builds/4/changelog.xml
+ create mode 100644 FULL-2021-09-14_11-01/jobs/pushbackuptoGIT/builds/4/log
+ create mode 100644 FULL-2021-09-14_11-01/jobs/pushbackuptoGIT/builds/5/build.xml
+ create mode 100644 FULL-2021-09-14_11-01/jobs/pushbackuptoGIT/builds/5/changelog.xml
+ create mode 100644 FULL-2021-09-14_11-01/jobs/pushbackuptoGIT/builds/5/log
+ create mode 100644 FULL-2021-09-14_11-01/jobs/pushbackuptoGIT/builds/6/build.xml
+ create mode 100644 FULL-2021-09-14_11-01/jobs/pushbackuptoGIT/builds/6/changelog.xml
+ create mode 100644 FULL-2021-09-14_11-01/jobs/pushbackuptoGIT/builds/6/log
+ create mode 100644 FULL-2021-09-14_11-01/jobs/pushbackuptoGIT/builds/7/build.xml
+ create mode 100644 FULL-2021-09-14_11-01/jobs/pushbackuptoGIT/builds/7/changelog.xml
+ create mode 100644 FULL-2021-09-14_11-01/jobs/pushbackuptoGIT/builds/7/log
+ create mode 100644 FULL-2021-09-14_11-01/jobs/pushbackuptoGIT/builds/legacyIds
+ create mode 100644 FULL-2021-09-14_11-01/jobs/pushbackuptoGIT/builds/permalinks
+ create mode 100644 FULL-2021-09-14_11-01/jobs/pushbackuptoGIT/config.xml
+ create mode 100644 FULL-2021-09-14_11-01/jobs/testJob/builds/1/build.xml
+ create mode 100644 FULL-2021-09-14_11-01/jobs/testJob/builds/1/changelog.xml
+ create mode 100644 FULL-2021-09-14_11-01/jobs/testJob/builds/1/log
+ create mode 100644 FULL-2021-09-14_11-01/jobs/testJob/builds/legacyIds
+ create mode 100644 FULL-2021-09-14_11-01/jobs/testJob/builds/permalinks
+ create mode 100644 FULL-2021-09-14_11-01/jobs/testJob/config.xml
+ create mode 100644 FULL-2021-09-14_11-01/nodeMonitors.xml
+ create mode 100644 FULL-2021-09-14_11-01/queue.xml
+ create mode 100644 FULL-2021-09-14_11-01/thinBackup.xml
+ create mode 100644 FULL-2021-09-14_11-01/users/admin_8689356076305939244/config.xml
+ create mode 100644 FULL-2021-09-14_11-01/users/users.xml
++ git push -u origin master
+Host key verification failed.
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+Build step 'Execute shell' marked build as failure
+Finished: FAILURE
