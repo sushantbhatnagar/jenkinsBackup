@@ -1,0 +1,30 @@
+<?xml version='1.1' encoding='UTF-8'?>
+<flow-definition plugin="workflow-job@2.41">
+  <actions/>
+  <description>Dynatrace</description>
+  <keepDependencies>false</keepDependencies>
+  <properties/>
+  <definition class="org.jenkinsci.plugins.workflow.cps.CpsFlowDefinition" plugin="workflow-cps@2.94">
+    <script>node {
+   stage(&apos;Preparation&apos;) {
+     echo &apos;Deployment in a Dynatrace Deployment Event begins... &apos;
+   }
+   stage(&apos;test&apos;) {
+         //wrap the deployment in a dynatrace deplyment event
+         createDynatraceDeploymentEvent(
+             envId: &apos;Dynatrace Tenant&apos;,
+             tagMatchRules: [
+                 [
+                     meTypes: [[meType: &apos;SERVICE&apos;]],
+                     tags: [
+                         [context: &apos;CONTEXTLESS&apos;, key: &apos;&apos;, value: &quot;${env.APP_NAME}&quot;]
+                        ]
+                    ]
+                 ])
+            }
+        }</script>
+    <sandbox>true</sandbox>
+  </definition>
+  <triggers/>
+  <disabled>false</disabled>
+</flow-definition>

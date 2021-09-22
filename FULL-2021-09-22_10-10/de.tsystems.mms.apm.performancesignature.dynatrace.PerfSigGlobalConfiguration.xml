@@ -1,0 +1,4 @@
+<?xml version='1.1' encoding='UTF-8'?>
+<de.tsystems.mms.apm.performancesignature.dynatrace.PerfSigGlobalConfiguration plugin="performance-signature-dynatrace@3.2.2">
+  <configurations/>
+</de.tsystems.mms.apm.performancesignature.dynatrace.PerfSigGlobalConfiguration>
