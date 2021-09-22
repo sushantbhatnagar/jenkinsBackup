@@ -1,0 +1,92 @@
+<?xml version='1.1' encoding='UTF-8'?>
+<project>
+  <actions/>
+  <description>NodeJs Example App</description>
+  <keepDependencies>false</keepDependencies>
+  <properties/>
+  <scm class="hudson.plugins.git.GitSCM" plugin="git@4.8.2">
+    <configVersion>2</configVersion>
+    <userRemoteConfigs>
+      <hudson.plugins.git.UserRemoteConfig>
+        <url>https://github.com/wardviaene/docker-demo.git</url>
+      </hudson.plugins.git.UserRemoteConfig>
+    </userRemoteConfigs>
+    <branches>
+      <hudson.plugins.git.BranchSpec>
+        <name>*/master</name>
+      </hudson.plugins.git.BranchSpec>
+    </branches>
+    <doGenerateSubmoduleConfigurations>false</doGenerateSubmoduleConfigurations>
+    <submoduleCfg class="empty-list"/>
+    <extensions/>
+  </scm>
+  <canRoam>true</canRoam>
+  <disabled>false</disabled>
+  <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>
+  <blockBuildWhenUpstreamBuilding>false</blockBuildWhenUpstreamBuilding>
+  <triggers/>
+  <concurrentBuild>false</concurrentBuild>
+  <builders>
+    <hudson.tasks.Shell>
+      <command># install npm
+
+npm install</command>
+      <configuredLocalRules/>
+    </hudson.tasks.Shell>
+    <jenkins.plugins.http__request.HttpRequest plugin="http_request@1.11">
+      <url>https://sxw93304.live.dynatrace.com/api/v1/events/</url>
+      <ignoreSslErrors>false</ignoreSslErrors>
+      <httpMode>POST</httpMode>
+      <httpProxy></httpProxy>
+      <proxyAuthentication></proxyAuthentication>
+      <passBuildParameters>false</passBuildParameters>
+      <validResponseCodes>100:399</validResponseCodes>
+      <validResponseContent></validResponseContent>
+      <acceptType>APPLICATION_JSON</acceptType>
+      <contentType>APPLICATION_JSON</contentType>
+      <outputFile></outputFile>
+      <timeout>0</timeout>
+      <consoleLogResponseBody>false</consoleLogResponseBody>
+      <quiet>false</quiet>
+      <authentication></authentication>
+      <requestBody>{
+  &quot;eventType&quot;: &quot;CUSTOM_DEPLOYMENT&quot;,
+  &quot;attachRules&quot;: {
+    &quot;tagRule&quot; : {
+        &quot;meTypes&quot; : &quot;PROCESS_GROUP_INSTANCE&quot;,
+        &quot;tags&quot; : &quot;&quot;
+    }
+  },
+  &quot;deploymentName&quot;:&quot;${JOB_NAME}&quot;,
+  &quot;deploymentVersion&quot;:&quot;1.1&quot;,
+  &quot;deploymentProject&quot;:&quot;CustomBankingService&quot;,
+  &quot;remediationAction&quot;:&quot;http://revertMe&quot;,
+  &quot;ciBackLink&quot;:&quot;${BUILD_URL}&quot;,
+  &quot;source&quot;:&quot;Jenkins&quot;,
+  &quot;customProperties&quot;:{
+    &quot;Jenkins Build Number&quot;: &quot;${BUILD_ID}&quot;,
+    &quot;Git commit&quot;: &quot;${GIT_COMMIT}&quot;
+  }
+}</requestBody>
+      <uploadFile></uploadFile>
+      <multipartName></multipartName>
+      <wrapAsMultipart>false</wrapAsMultipart>
+      <useSystemProperties>false</useSystemProperties>
+      <useNtlm>false</useNtlm>
+      <customHeaders>
+        <pair>
+          <name>Authorization</name>
+          <value>dt0c01.AEMAUALXCMXLY77OAC62JMYV.QES3CCJDNTLQ57DY3SGDUVOWTJ55KOGHDWFSCSE6UJR7VLCEB263NJ55LVFQXIWR</value>
+          <maskValue>false</maskValue>
+        </pair>
+      </customHeaders>
+    </jenkins.plugins.http__request.HttpRequest>
+  </builders>
+  <publishers/>
+  <buildWrappers>
+    <jenkins.plugins.nodejs.NodeJSBuildWrapper plugin="nodejs@1.4.0">
+      <nodeJSInstallationName>NodeJS</nodeJSInstallationName>
+      <cacheLocationStrategy class="jenkins.plugins.nodejs.cache.DefaultCacheLocationLocator"/>
+    </jenkins.plugins.nodejs.NodeJSBuildWrapper>
+  </buildWrappers>
+</project>
