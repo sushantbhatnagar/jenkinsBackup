@@ -1,0 +1,12 @@
+<?xml version='1.1' encoding='UTF-8'?>
+<de.tsystems.mms.apm.performancesignature.dynatracesaas.DynatraceGlobalConfiguration plugin="performance-signature-dynatracesaas@3.2.2">
+  <configurations>
+    <de.tsystems.mms.apm.performancesignature.dynatracesaas.model.DynatraceServerConfiguration>
+      <name>Dynatrace</name>
+      <apiTokenId>5c27ebbb-fd99-4f71-a1b8-f67bc33efa9f</apiTokenId>
+      <verifyCertificate>false</verifyCertificate>
+      <useProxy>false</useProxy>
+      <serverUrl>https://sxw93304.live.dynatrace.com/</serverUrl>
+    </de.tsystems.mms.apm.performancesignature.dynatracesaas.model.DynatraceServerConfiguration>
+  </configurations>
+</de.tsystems.mms.apm.performancesignature.dynatracesaas.DynatraceGlobalConfiguration>
