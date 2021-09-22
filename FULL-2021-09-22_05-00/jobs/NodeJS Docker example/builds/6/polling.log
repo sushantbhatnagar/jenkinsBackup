@@ -1,0 +1,23 @@
+Started on Sep 21, 2021, 6:52:00 AM
+Polling SCM changes on master
+Using strategy: Default
+[poll] Last Built Revision: Revision 899a210ccf22a53d6e3e11bbc7f2534baa0b458c (origin/master)
+Selected Git installation does not exist. Using Default
+The recommended git tool is: NONE
+No credentials specified
+ > git rev-parse --resolve-git-dir /var/jenkins_home/workspace/NodeJS Docker example/.git # timeout=10
+Fetching changes from the remote Git repositories
+ > git config remote.origin.url https://github.com/sushantbhatnagar/docker-demo.git # timeout=10
+Fetching upstream changes from https://github.com/sushantbhatnagar/docker-demo.git
+ > git --version # timeout=10
+ > git --version # 'git version 2.30.2'
+ > git fetch --tags --force --progress -- https://github.com/sushantbhatnagar/docker-demo.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+Polling for changes in
+Seen branch in repository origin/master
+Seen branch in repository origin/v1.0.1
+Seen branch in repository origin/v1.0.2
+Seen 3 remote branches
+ > git show-ref --tags -d # timeout=10
+ > git log --full-history --no-abbrev --format=raw -M -m 899a210ccf22a53d6e3e11bbc7f2534baa0b458c..7cf99e71dcde658c9be06685c4c58594cf81b3b9 # timeout=10
+Done. Took 0.99 sec
+Changes found
