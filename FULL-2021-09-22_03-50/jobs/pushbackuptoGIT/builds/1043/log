@@ -1,0 +1,9 @@
+Started by timer
+Running as SYSTEM
+Building in workspace /var/jenkins_home/workspace/pushbackuptoGIT
+[pushbackuptoGIT] $ /bin/sh -xe /tmp/jenkins8641419400808285203.sh
++ cd /var/jenkins_home/backup
++ git add FULL-2021-09-21_15-40
++ git commit -m Jenkins Backup
+Auto packing the repository in background for optimum performance.
+See "git help gc" for manual housekeeping.
