@@ -1,0 +1,26 @@
+<?xml version='1.1' encoding='UTF-8'?>
+<javaposse.jobdsl.plugin.DescriptorImpl plugin="job-dsl@1.77">
+  <templateJobMap class="com.google.common.collect.HashMultimap" serialization="custom">
+    <com.google.common.collect.HashMultimap>
+      <default/>
+      <int>8</int>
+      <int>0</int>
+    </com.google.common.collect.HashMultimap>
+  </templateJobMap>
+  <generatedJobMap class="concurrent-hash-map">
+    <entry>
+      <string>NodeJS Docker example</string>
+      <javaposse.jobdsl.plugin.SeedReference>
+        <seedJobName>seedJob</seedJobName>
+        <digest>c6641c0eb73832babb73640a40d1a8ff</digest>
+      </javaposse.jobdsl.plugin.SeedReference>
+    </entry>
+    <entry>
+      <string>NodeJS example with DSL</string>
+      <javaposse.jobdsl.plugin.SeedReference>
+        <seedJobName>seedJob</seedJobName>
+        <digest>30e07c533a40b8dffb0b423d6dbeefaa</digest>
+      </javaposse.jobdsl.plugin.SeedReference>
+    </entry>
+  </generatedJobMap>
+</javaposse.jobdsl.plugin.DescriptorImpl>
